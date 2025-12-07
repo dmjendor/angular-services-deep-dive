@@ -1,11 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 import { Task, TaskStatus } from './task.model';
 
-@Injectable({
-  providedIn: 'root',
-})
+// @Injectable({
+//   providedIn: 'root',
+// })
 export class TasksService {
-  // tasks = []
   private tasks = signal<Task[]>([]);
 
   allTasks = this.tasks.asReadonly();
